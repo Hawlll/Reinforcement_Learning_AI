@@ -1,0 +1,2 @@
+nes_py (microsoft visual studio C++ 14.0 required)
+gym_super_mario_bros==7.3.0
