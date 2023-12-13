@@ -65,7 +65,7 @@ env = VecFrameStack(env, 4, channels_order='last')
 #     plt.imshow(state[0][:,:,index])
 # plt.show()
 
-#TrainAndLoggingCallback class saves model
+#TrainAndLoggingCallback class saves model for a set frequency
 
 class TrainAndLoggingCallback(BaseCallback):
     def __init__(self, check_freq, save_path, verbose=1):
@@ -82,6 +82,7 @@ class TrainAndLoggingCallback(BaseCallback):
             model_path = os.path.join(self.save_path, f'best_model{self.n_calls}')
             self.model.save(model_path)
         return True
+
 
 CHECKPOINT_DIR = './train/'
 LOG_DIR = './logs/'
